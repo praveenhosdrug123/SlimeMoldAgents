@@ -1,0 +1,15 @@
+langchain
+langchain-openai
+chromadb
+openai
+networkx
+matplotlib
+seaborn
+pandas
+numpy
+plotly
+sentence-transformers
+textblob
+langgraph
+pydantic
+python-dotenv
