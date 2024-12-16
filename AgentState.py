@@ -7,7 +7,8 @@ import networkx as nx
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import logging
-import AgentSlimeMoldOptimizer 
+import AgentSlimeMoldOptimizer
+import data_manager
 # Load environment variables from .env file
 load_dotenv()
 
@@ -270,13 +271,15 @@ class GraphOptimizer:
             self.graph.add_edge(source, target, weight=weight)
 
 def create_system(recursion_limit: int = 10) -> StateGraph:
+    # Creating a Vector Database of the session
+    data_manager = DataManager()
     
-    # Configure logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    logger = logging.getLogger("AgentWorkflow")
+    def store_and_process(agent_name, process_func):
+        def wrapper(state: AgentState):
+            result = process_func(state)
+            data_manager.store_interaction(result)
+            return result
+        return wrapper
     
     # Initialize agents
     chief = ChiefAgent(recursion_limit=recursion_limit)
@@ -286,23 +289,14 @@ def create_system(recursion_limit: int = 10) -> StateGraph:
     
     workflow = StateGraph(AgentState)
     
-    # Add logging to each node
-    def log_and_process(agent_name, process_func):
-        def wrapper(state: AgentState):
-            logger.info(f"=== {agent_name.upper()} STEP ===")
-            logger.info(f"Path history: {state.path_history}")
-            logger.info(f"Last message: {state.messages[-1].content if state.messages else 'None'}")
-            result = process_func(state)
-            logger.info(f"{agent_name} output: {result.messages[-1].content if result.messages else 'None'}")
-            return result
-        return wrapper
+
     
     # Add nodes with logging
-    workflow.add_node("route", log_and_process("router", chief.route_request))
-    workflow.add_node("research", log_and_process("researcher", researcher.process))
-    workflow.add_node("code", log_and_process("coder", coder.process))
-    workflow.add_node("critique", log_and_process("critic", critic.process))
-    workflow.add_node("human_feedback", log_and_process("human", get_human_feedback))
+    workflow.add_node("route", store_and_process("router", chief.route_request))
+    workflow.add_node("research", store_and_process("researcher", researcher.process))
+    workflow.add_node("code", store_and_process("coder", coder.process))
+    workflow.add_node("critique", store_and_process("critic", critic.process))
+    workflow.add_node("human_feedback", store_and_process("human", get_human_feedback))
     
     
     # Define edge routing based on state's current_agent
