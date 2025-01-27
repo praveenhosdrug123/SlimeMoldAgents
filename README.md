@@ -72,7 +72,7 @@ The system includes comprehensive safety features (see `src/safetyframework.py`)
 ## Acknowledgments
 
 - Inspired by Physarum polycephalum behavior
-- Built with Netwrokx, LangChain and Sentence Transformers
+- Built with networkx, LangChain and Sentence Transformers
 
 Would you like me to add any additional sections or make any modifications?
 
