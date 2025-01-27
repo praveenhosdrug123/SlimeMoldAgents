@@ -49,8 +49,8 @@ Test implementations are available in the `tests` directory:
 
 ## Documentation
 
-Detailed documentation is available in the `docs/` directory:
-- [System Overview](docs/system_overview.md)
+Detailed documentation:
+- [System Overview](https://docs.google.com/document/d/1o8wuVeYq_ZeparGOs2SfNrAtvW_cDuBCtlqYCJgRtNo/edit?tab=t.kj37woj54h0x)
 
 
 ## Safety Features
