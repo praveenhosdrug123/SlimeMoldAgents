@@ -1,0 +1,12 @@
+WARNING:root:Safety violation detected:
+Type: PII/ssn
+Description: Detected potential ssn in text
+Pattern: \b\d{3}-\d{2}-\d{4}\b
+Text snippet: Here is my email: test@example.com and SSN: 123-45-6789...
+
+WARNING:root:Safety violation detected:
+Type: PII/email
+Description: Detected potential email in text
+Pattern: \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b
+Text snippet: Here is my email: test@example.com and SSN: 123-45-6789...
+
