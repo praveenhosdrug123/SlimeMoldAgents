@@ -1,0 +1,743 @@
+2025-01-13 17:23:04,331 - DEBUG - Graph loaded: DiGraph with 78 nodes and 72 edges
+2025-01-13 17:23:04,331 - INFO - Processing nodes...
+2025-01-13 17:23:04,331 - DEBUG - Node query_fc575010-217b-4712-b95d-b78869e7daae attributes: {'content': 'Implement a quicksort algorithm in Python', 'timestamp': '2025-01-13T15:52:16.825466', 'type': 'initial_query'}
+2025-01-13 17:23:04,331 - DEBUG - Node content: Implement a quicksort algorithm in Python...
+2025-01-13 17:23:04,331 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,331 - DEBUG - Agent type: 
+2025-01-13 17:23:04,331 - INFO - Found root query: Implement a quicksort algorithm in Python...
+2025-01-13 17:23:04,331 - DEBUG - Node chief_eee07cbb-223a-4871-ae99-2016b70f9549 attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825473'}
+2025-01-13 17:23:04,331 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,331 - DEBUG - Node type: 
+2025-01-13 17:23:04,331 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,331 - DEBUG - Node message_b2c3976e-ee82-46ab-ba27-134379f615d3 attributes: {'content': 'This requires algorithm understanding first. Routing to researcher for theoretical background.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825487'}
+2025-01-13 17:23:04,331 - DEBUG - Node content: This requires algorithm understanding first. Routing to researcher for theoretical background....
+2025-01-13 17:23:04,331 - DEBUG - Node type: 
+2025-01-13 17:23:04,331 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,331 - DEBUG - Node message_ca70a714-b8c4-4b7f-8bb7-d2c42e44f6b5 attributes: {'content': "QuickSort is a divide-and-conquer algorithm that works by selecting a 'pivot' element and partitioning the array around it. Key characteristics:\n- Average time complexity: O(n log n)\n- In-place sorting\n- Unstable sort\n- Efficient for large datasets", 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825497'}
+2025-01-13 17:23:04,339 - DEBUG - Node content: QuickSort is a divide-and-conquer algorithm that works by selecting a 'pivot' element and partitioni...
+2025-01-13 17:23:04,339 - DEBUG - Node type: 
+2025-01-13 17:23:04,339 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,339 - DEBUG - Node chief_bb740252-e5b4-4379-ae67-f089a0ccef43 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825503'}
+2025-01-13 17:23:04,339 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,339 - DEBUG - Node type: 
+2025-01-13 17:23:04,339 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,340 - DEBUG - Node message_bb90d6cf-89da-463a-b26b-b27aaf20e2a3 attributes: {'content': 'Good theoretical foundation established. Routing to coder for implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825510'}
+2025-01-13 17:23:04,340 - DEBUG - Node content: Good theoretical foundation established. Routing to coder for implementation....
+2025-01-13 17:23:04,340 - DEBUG - Node type: 
+2025-01-13 17:23:04,340 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,340 - DEBUG - Node message_70912994-842c-4f34-b879-335043b9be45 attributes: {'content': '```python\ndef quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)\n```', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825516'}
+2025-01-13 17:23:04,340 - DEBUG - Node content: ```python
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2...
+2025-01-13 17:23:04,340 - DEBUG - Node type: 
+2025-01-13 17:23:04,340 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,340 - DEBUG - Node chief_ec6bad59-ca88-4b39-acbb-a9b0570b1a78 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825523'}
+2025-01-13 17:23:04,340 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,340 - DEBUG - Node type: 
+2025-01-13 17:23:04,340 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,340 - DEBUG - Node message_014acb6f-86b2-421e-bd77-02577a310f4d attributes: {'content': 'Implementation provided. Routing to critic for code review and quality assessment.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825529'}
+2025-01-13 17:23:04,340 - DEBUG - Node content: Implementation provided. Routing to critic for code review and quality assessment....
+2025-01-13 17:23:04,340 - DEBUG - Node type: 
+2025-01-13 17:23:04,340 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,340 - DEBUG - Node message_a9d8f510-92e1-4fc0-92b3-d5b7a25c2b83 attributes: {'content': 'Code Review:\n1. Implementation is clear but not in-place\n2. Pivot selection could be improved\n3. No handling for edge cases\n4. Suggest adding type hints and documentation', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825537'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Code Review:
+1. Implementation is clear but not in-place
+2. Pivot selection could be improved
+3. No ...
+2025-01-13 17:23:04,341 - DEBUG - Node type: 
+2025-01-13 17:23:04,341 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,341 - DEBUG - Node chief_8aec48fb-c5b3-47f7-a567-305b4296003b attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825546'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,341 - DEBUG - Node type: 
+2025-01-13 17:23:04,341 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,341 - DEBUG - Node message_100caeed-e4e3-40a6-90b3-4d16c726a245 attributes: {'content': 'Review indicates several improvements needed. Should we route back to coder for improvements or is this sufficient for the current requirements?', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825551'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Review indicates several improvements needed. Should we route back to coder for improvements or is t...
+2025-01-13 17:23:04,341 - DEBUG - Node type: 
+2025-01-13 17:23:04,341 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,341 - DEBUG - Node query_68e201e3-77ad-4174-9c24-0bb2e28498a1 attributes: {'content': 'Implement a merge sort algorithm in Python', 'timestamp': '2025-01-13T15:52:16.825559', 'type': 'initial_query'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Implement a merge sort algorithm in Python...
+2025-01-13 17:23:04,341 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,341 - DEBUG - Agent type: 
+2025-01-13 17:23:04,341 - INFO - Found root query: Implement a merge sort algorithm in Python...
+2025-01-13 17:23:04,341 - DEBUG - Node chief_a633c53c-b25e-452f-b172-ab4bed36e8e3 attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825560'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,341 - DEBUG - Node type: 
+2025-01-13 17:23:04,341 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,341 - DEBUG - Node message_3d0e3955-dad1-431f-803d-4942f6d1b330 attributes: {'content': 'Starting with theoretical background. Routing to researcher for algorithm explanation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825566'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: Starting with theoretical background. Routing to researcher for algorithm explanation....
+2025-01-13 17:23:04,341 - DEBUG - Node type: 
+2025-01-13 17:23:04,341 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,341 - DEBUG - Node message_87cb81fc-629f-4023-97e9-f54cd0beb062 attributes: {'content': 'MergeSort is a divide-and-conquer algorithm that recursively splits the array and merges sorted subarrays. Key characteristics:\n- Guaranteed O(n log n) complexity\n- Stable sort\n- Requires extra space\n- Good for linked lists', 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825571'}
+2025-01-13 17:23:04,341 - DEBUG - Node content: MergeSort is a divide-and-conquer algorithm that recursively splits the array and merges sorted suba...
+2025-01-13 17:23:04,342 - DEBUG - Node type: 
+2025-01-13 17:23:04,342 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,342 - DEBUG - Node chief_da8f70ed-c1af-42c8-8394-bf992597f4de attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825579'}
+2025-01-13 17:23:04,342 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,342 - DEBUG - Node type: 
+2025-01-13 17:23:04,342 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,342 - DEBUG - Node message_a913ac5e-1787-4766-973d-325a4702165d attributes: {'content': 'Algorithm characteristics clear. Routing to coder for implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825587'}
+2025-01-13 17:23:04,342 - DEBUG - Node content: Algorithm characteristics clear. Routing to coder for implementation....
+2025-01-13 17:23:04,342 - DEBUG - Node type: 
+2025-01-13 17:23:04,342 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,342 - DEBUG - Node message_40dcb732-bb4f-4455-8015-10bb9d4f3070 attributes: {'content': '```python\ndef mergesort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = mergesort(arr[:mid])\n    right = mergesort(arr[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n```', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825592'}
+2025-01-13 17:23:04,342 - DEBUG - Node content: ```python
+def mergesort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    l...
+2025-01-13 17:23:04,342 - DEBUG - Node type: 
+2025-01-13 17:23:04,342 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,342 - DEBUG - Node chief_81989960-b5d9-4282-8302-72b26cea92ae attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825599'}
+2025-01-13 17:23:04,343 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,343 - DEBUG - Node type: 
+2025-01-13 17:23:04,343 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,343 - DEBUG - Node message_553abddc-8279-4dd8-a139-7b9d0c24eac3 attributes: {'content': 'Implementation complete. Routing to critic for code review.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825605'}
+2025-01-13 17:23:04,343 - DEBUG - Node content: Implementation complete. Routing to critic for code review....
+2025-01-13 17:23:04,343 - DEBUG - Node type: 
+2025-01-13 17:23:04,343 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,343 - DEBUG - Node message_d35771c0-def4-4d74-910c-cab0a510be5d attributes: {'content': 'Code Review:\n1. Clean implementation but space inefficient\n2. Good stability maintenance\n3. Consider in-place implementation\n4. Add input validation', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825611'}
+2025-01-13 17:23:04,343 - DEBUG - Node content: Code Review:
+1. Clean implementation but space inefficient
+2. Good stability maintenance
+3. Consider...
+2025-01-13 17:23:04,343 - DEBUG - Node type: 
+2025-01-13 17:23:04,343 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,343 - DEBUG - Node chief_02d855c2-c180-4f46-8b90-b14774676b4a attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825619'}
+2025-01-13 17:23:04,343 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,343 - DEBUG - Node type: 
+2025-01-13 17:23:04,343 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,343 - DEBUG - Node message_84fcdedf-f0a1-4baa-8c39-b70bcddf1c6b attributes: {'content': 'Review suggests optimization opportunities. Should we proceed with improvements or is this implementation sufficient?', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825627'}
+2025-01-13 17:23:04,344 - DEBUG - Node content: Review suggests optimization opportunities. Should we proceed with improvements or is this implement...
+2025-01-13 17:23:04,344 - DEBUG - Node type: 
+2025-01-13 17:23:04,344 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,344 - DEBUG - Node query_a1c88ebc-1f47-476b-8396-98c8fdc7e703 attributes: {'content': 'Create a PostgreSQL database connection class with connection pooling', 'timestamp': '2025-01-13T15:52:16.825634', 'type': 'initial_query'}
+2025-01-13 17:23:04,344 - DEBUG - Node content: Create a PostgreSQL database connection class with connection pooling...
+2025-01-13 17:23:04,344 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,344 - DEBUG - Agent type: 
+2025-01-13 17:23:04,344 - INFO - Found root query: Create a PostgreSQL database connection class with connection pooling...
+2025-01-13 17:23:04,344 - DEBUG - Node chief_b0e23e9b-d8b3-466e-a8e4-74a2f86c5fe0 attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825635'}
+2025-01-13 17:23:04,344 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_0c4ab1d4-c7b9-4d55-b15c-fa091084fb75 attributes: {'content': 'Database connection requires best practices research first. Routing to researcher.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825641'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: Database connection requires best practices research first. Routing to researcher....
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_3e993535-b670-4dac-a057-8cc40e5cddbc attributes: {'content': 'For PostgreSQL connection pooling, we should use psycopg2 with connection pooling libraries like psycopg2-pool or SQLAlchemy. Key considerations:\n1. Connection lifecycle\n2. Pool size management\n3. Error handling\n4. Resource cleanup', 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825650'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: For PostgreSQL connection pooling, we should use psycopg2 with connection pooling libraries like psy...
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,345 - DEBUG - Node chief_4f70b504-861d-4bbb-8609-97607e580e3c attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825658'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_8795abbc-da49-41d4-a31d-8f71ff00b859 attributes: {'content': 'Research complete. Routing to coder for initial implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825663'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: Research complete. Routing to coder for initial implementation....
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_67ce702c-a2a0-4f85-96ad-7617c6433119 attributes: {'content': '```python\nfrom psycopg2 import pool\n\nclass DatabasePool:\n    def __init__(self, minconn=1, maxconn=10, **kwargs):\n        self.pool = pool.SimpleConnectionPool(\n            minconn, maxconn,\n            **kwargs\n        )\n    \n    def get_connection(self):\n        return self.pool.getconn()\n    \n    def return_connection(self, conn):\n        self.pool.putconn(conn)\n    \n    def close_pool(self):\n        self.pool.closeall()\n```', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825668'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: ```python
+from psycopg2 import pool
+
+class DatabasePool:
+    def __init__(self, minconn=1, maxconn=1...
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,345 - DEBUG - Node chief_bd53d097-3602-4ae4-aa49-8a428bef48c2 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825673'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_595d9f70-eaee-45f8-bda4-64a757280615 attributes: {'content': 'Basic implementation provided. Routing to critic for review.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825678'}
+2025-01-13 17:23:04,345 - DEBUG - Node content: Basic implementation provided. Routing to critic for review....
+2025-01-13 17:23:04,345 - DEBUG - Node type: 
+2025-01-13 17:23:04,345 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,345 - DEBUG - Node message_99e4a477-7334-49a8-b507-d3329c626f8b attributes: {'content': 'Code Review:\n1. Need context manager implementation\n2. Add error handling\n3. Consider connection timeout\n4. Add connection validation\n5. Missing documentation', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825683'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Code Review:
+1. Need context manager implementation
+2. Add error handling
+3. Consider connection tim...
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,346 - DEBUG - Node chief_d421458e-d6b2-416b-a142-726e8189dc57 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825688'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,346 - DEBUG - Node message_5546518c-ace9-4a33-b34e-45f26ced4d6e attributes: {'content': 'Critical improvements needed. Routing back to coder for updates.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825696'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Critical improvements needed. Routing back to coder for updates....
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,346 - DEBUG - Node message_2ef560e0-6fb4-41ec-84fa-a68b65d32c2e attributes: {'content': '```python\n# Updated implementation with context manager\nclass DatabasePool:\n    def __init__(self, minconn=1, maxconn=10, **kwargs):\n        self.pool = pool.SimpleConnectionPool(\n            minconn, maxconn,\n            **kwargs\n        )\n    \n    def __enter__(self):\n        self.conn = self.pool.getconn()\n        return self.conn\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.pool.putconn(self.conn)\n```', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825703'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: ```python
+# Updated implementation with context manager
+class DatabasePool:
+    def __init__(self, m...
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,346 - DEBUG - Node chief_344864d8-4f2c-48cb-9dc0-44698c33f934 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825708'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,346 - DEBUG - Node message_1c24b9c6-9a2b-487e-83cd-7368419e5757 attributes: {'content': 'Updated implementation addresses context management. Should we proceed with additional improvements?', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825715'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Updated implementation addresses context management. Should we proceed with additional improvements?...
+2025-01-13 17:23:04,346 - DEBUG - Node type: 
+2025-01-13 17:23:04,346 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,346 - DEBUG - Node query_470ac084-151b-4a1c-b0e0-3978e149167f attributes: {'content': 'Create a REST API client for OpenWeatherMap', 'timestamp': '2025-01-13T15:52:16.825723', 'type': 'initial_query'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Create a REST API client for OpenWeatherMap...
+2025-01-13 17:23:04,346 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,346 - DEBUG - Agent type: 
+2025-01-13 17:23:04,346 - INFO - Found root query: Create a REST API client for OpenWeatherMap...
+2025-01-13 17:23:04,346 - DEBUG - Node chief_76f50cd3-0932-48d5-97d2-d241fd668233 attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825724'}
+2025-01-13 17:23:04,346 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_d3fdec1b-d2d1-4220-93aa-ac1278179ad6 attributes: {'content': 'API integration requires understanding requirements first. Routing to researcher.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825732'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: API integration requires understanding requirements first. Routing to researcher....
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_08afe253-721f-4a0e-8c4b-efc4e174ac87 attributes: {'content': 'OpenWeatherMap API requires:\n1. API key authentication\n2. Rate limiting handling\n3. JSON response parsing\n4. Error handling for different HTTP status codes', 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825737'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: OpenWeatherMap API requires:
+1. API key authentication
+2. Rate limiting handling
+3. JSON response pa...
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,347 - DEBUG - Node chief_ab8b64be-5304-478c-a5e5-3c803778bad5 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825747'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_14f94869-366c-4a51-9e38-a8da320fd740 attributes: {'content': 'Requirements gathered. Routing to coder for implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825753'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Requirements gathered. Routing to coder for implementation....
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_557a195d-e390-465f-a9f9-7c65425f5eae attributes: {'content': "```python\nimport requests\n\nclass WeatherClient:\n    def __init__(self, api_key):\n        self.api_key = api_key\n        self.base_url = 'https://api.openweathermap.org/data/2.5'\n    \n    def get_weather(self, city):\n        response = requests.get(\n            f'{self.base_url}/weather',\n            params={\n                'q': city,\n                'appid': self.api_key\n            }\n        )\n        response.raise_for_status()\n        return response.json()\n```", 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825758'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: ```python
+import requests
+
+class WeatherClient:
+    def __init__(self, api_key):
+        self.api_ke...
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,347 - DEBUG - Node chief_09ce9165-04d8-4fd4-8ef2-2fbe9a3e9818 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825764'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_c9ebd30a-5564-443c-8ccd-d3dce15cbf81 attributes: {'content': 'Basic implementation complete. Routing to critic for review.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825769'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Basic implementation complete. Routing to critic for review....
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_26e37774-32db-4157-9dbe-13fac79c7aec attributes: {'content': 'Code Review:\n1. Add retry mechanism\n2. Implement rate limiting\n3. Add response validation\n4. Consider adding caching\n5. Need better error handling', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825777'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Code Review:
+1. Add retry mechanism
+2. Implement rate limiting
+3. Add response validation
+4. Conside...
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,347 - DEBUG - Node chief_675bfe25-b0af-44b8-9ec4-d90c1e830a12 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825783'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,347 - DEBUG - Node type: 
+2025-01-13 17:23:04,347 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,347 - DEBUG - Node message_1f7e02f5-895d-4e6f-a8a2-4ee224207ef8 attributes: {'content': 'Several critical improvements suggested. Should we implement these enhancements?', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825790'}
+2025-01-13 17:23:04,347 - DEBUG - Node content: Several critical improvements suggested. Should we implement these enhancements?...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node query_b29e00be-f108-49f9-9beb-58ef80c88151 attributes: {'content': 'Create a data processing pipeline for CSV files using pandas', 'timestamp': '2025-01-13T15:52:16.825801', 'type': 'initial_query'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Create a data processing pipeline for CSV files using pandas...
+2025-01-13 17:23:04,348 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,348 - DEBUG - Agent type: 
+2025-01-13 17:23:04,348 - INFO - Found root query: Create a data processing pipeline for CSV files using pandas...
+2025-01-13 17:23:04,348 - DEBUG - Node chief_49a0d144-eb0f-479c-be2a-3b2285df6364 attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825802'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_96592d09-cc5a-4c95-9cd7-241a2f049575 attributes: {'content': 'Data processing pipeline needs requirements analysis. Routing to researcher.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825807'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Data processing pipeline needs requirements analysis. Routing to researcher....
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_49537914-26b4-4ec1-b691-5e11b09b2eb3 attributes: {'content': 'Data processing pipeline should handle:\n1. Data validation\n2. Cleaning\n3. Transformation\n4. Error logging\n5. Large file processing', 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825812'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Data processing pipeline should handle:
+1. Data validation
+2. Cleaning
+3. Transformation
+4. Error lo...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,348 - DEBUG - Node chief_41087d9c-56dd-44d6-b81d-5275d4256107 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825817'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_5a465801-525a-447b-82b2-0fd83861e714 attributes: {'content': 'Requirements clear. Routing to coder for initial implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825826'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Requirements clear. Routing to coder for initial implementation....
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_81de12e8-3a3a-4543-9829-7bad310d2103 attributes: {'content': "```python\nimport pandas as pd\nfrom typing import List, Dict\n\nclass DataPipeline:\n    def __init__(self, filename: str):\n        self.df = pd.read_csv(filename)\n    \n    def clean_data(self) -> None:\n        self.df.dropna(inplace=True)\n        self.df.drop_duplicates(inplace=True)\n    \n    def transform_data(self, operations: List[Dict]) -> None:\n        for op in operations:\n            if op['type'] == 'rename':\n                self.df.rename(columns=op['mapping'], inplace=True)\n            elif op['type'] == 'filter':\n                self.df = self.df.query(op['condition'])\n```", 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825831'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: ```python
+import pandas as pd
+from typing import List, Dict
+
+class DataPipeline:
+    def __init__(se...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,348 - DEBUG - Node chief_67ebfa69-ef5c-4b3b-a203-36bb1ab268bd attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825840'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_72ede42c-5b7c-42cf-aed1-7ffa4411a1ae attributes: {'content': 'Initial implementation complete. Routing to critic for review.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825848'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Initial implementation complete. Routing to critic for review....
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_23795dfe-7197-4bf9-a599-7d213490f32e attributes: {'content': 'Code Review:\n1. Add data validation\n2. Implement chunking for large files\n3. Add progress tracking\n4. Include data type validation\n5. Add logging mechanism', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825874'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Code Review:
+1. Add data validation
+2. Implement chunking for large files
+3. Add progress tracking
+4...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,348 - DEBUG - Node chief_4e95a9d3-acfb-4c8b-8c57-2aaf428d7cb5 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825880'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_ab6369e1-5f9f-4b72-8edb-3a078c83dca8 attributes: {'content': 'Performance and validation improvements needed. Routing back to coder.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825888'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Performance and validation improvements needed. Routing back to coder....
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,348 - DEBUG - Node message_b16f6e63-82a5-4571-99c6-bc2691a7a5bb attributes: {'content': '```python\n# Updated with chunking and validation\nclass DataPipeline:\n    def __init__(self, filename: str, chunk_size: int = 10000):\n        self.filename = filename\n        self.chunk_size = chunk_size\n    \n    def process_in_chunks(self):\n        for chunk in pd.read_csv(self.filename, chunksize=self.chunk_size):\n            yield self.process_chunk(chunk)\n```', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825893'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: ```python
+# Updated with chunking and validation
+class DataPipeline:
+    def __init__(self, filename...
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,348 - DEBUG - Node chief_2a271cf8-f820-4450-84e6-bb078d9da5e5 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825901'}
+2025-01-13 17:23:04,348 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,348 - DEBUG - Node type: 
+2025-01-13 17:23:04,348 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_4a346064-f823-4070-9be6-06ff374ae950 attributes: {'content': 'Chunking implementation added. Should we address the remaining improvement suggestions?', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825908'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Chunking implementation added. Should we address the remaining improvement suggestions?...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node query_f2771961-debc-4ed8-949d-86df333c5324 attributes: {'content': 'Could you help me understand and write a QuickSort implementation in Python? Please explain the algorithm as well.', 'timestamp': '2025-01-13T15:52:16.825916', 'type': 'initial_query'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Could you help me understand and write a QuickSort implementation in Python? Please explain the algo...
+2025-01-13 17:23:04,349 - DEBUG - Node type: initial_query
+2025-01-13 17:23:04,349 - DEBUG - Agent type: 
+2025-01-13 17:23:04,349 - INFO - Found root query: Could you help me understand and write a QuickSort implementation in Python? Please explain the algo...
+2025-01-13 17:23:04,349 - DEBUG - Node chief_c9461649-1f77-474b-9fa1-40fa6e30a6aa attributes: {'content': 'Initial query analysis', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825920'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Initial query analysis...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_8ab5e3ea-a607-4b7d-b0ed-74102a4e77f6 attributes: {'content': "This is a comprehensive request involving both theoretical understanding and practical implementation. Let's start with a thorough theoretical foundation from our researcher before moving to implementation. Routing to researcher.", 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825925'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: This is a comprehensive request involving both theoretical understanding and practical implementatio...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_f00a6148-4cf1-4f09-8c44-ff194bb3a6e1 attributes: {'content': "QuickSort is one of the most efficient and widely used sorting algorithms. Let me break down its key aspects:\n\nTheoretical Foundation:\n1. Algorithm Paradigm: Divide-and-conquer\n2. Time Complexity:\n - Average case: O(n log n)\n - Worst case: O(n²) when poorly pivoted\n - Best case: O(n log n)\n3. Space Complexity: O(log n) due to recursion stack\n\nKey Characteristics:\n- In-place sorting capability\n- Unstable sort (doesn't preserve order of equal elements)\n- Excellent cache performance\n- Highly practical for large datasets\n\nCore Concept:\n1. Select a 'pivot' element\n2. Partition elements around pivot (smaller left, larger right)\n3. Recursively apply to sub-arrays\n4. Combine results\n\nCommon Optimization Techniques:\n- Median-of-three pivot selection\n- Switching to insertion sort for small subarrays\n- Tail recursion elimination", 'agent': 'researcher', 'timestamp': '2025-01-13T15:52:16.825933'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: QuickSort is one of the most efficient and widely used sorting algorithms. Let me break down its key...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: researcher
+2025-01-13 17:23:04,349 - DEBUG - Node chief_5bd56114-7c0d-465a-9f58-791ce28968b8 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825941'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_5e53ce69-9e90-4ac5-8821-a54d53ade349 attributes: {'content': 'Excellent theoretical background provided. Now we need a practical implementation incorporating these concepts. Routing to coder for a robust implementation.', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825948'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Excellent theoretical background provided. Now we need a practical implementation incorporating thes...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_25b92de9-d1dd-4ee0-9064-a03d810b7d11 attributes: {'content': 'python\nfrom typing import List, Optional\n\ndef quicksort(arr: List[int], left: Optional[int] = None, right: Optional[int] = None) -> List[int]:\n    """Implementation of QuickSort algorithm with in-place partitioning.\n    \n    Args:\n        arr: List of integers to be sorted\n        left: Starting index of the partition (None for full array)\n        right: Ending index of the partition (None for full array)\n    \n    Returns:\n        Sorted list of integers\n    """\n    # Initialize left and right for first call\n    if left is None:\n        left = 0\n    if right is None:\n        right = len(arr) - 1\n    \n    def partition(low: int, high: int) -> int:\n        # Use median-of-three for pivot selection\n        mid = (low + high) // 2\n        pivot_candidates = [\n            (arr[low], low),\n            (arr[mid], mid),\n            (arr[high], high)\n        ]\n        _, pivot_idx = sorted(pivot_candidates, key=lambda x: x[0])[1]\n        arr[pivot_idx], arr[high] = arr[high], arr[pivot_idx]\n        pivot = arr[high]\n        \n        i = low - 1\n        for j in range(low, high):\n            if arr[j] <= pivot:\n                i += 1\n                arr[i], arr[j] = arr[j], arr[i]\n        \n        arr[i + 1], arr[high] = arr[high], arr[i + 1]\n        return i + 1\n    \n    def _quicksort(low: int, high: int):\n        if low < high:\n            # Use insertion sort for small arrays\n            if high - low < 10:\n                for i in range(low + 1, high + 1):\n                    key = arr[i]\n                    j = i - 1\n                    while j >= low and arr[j] > key:\n                        arr[j + 1] = arr[j]\n                        j -= 1\n                    arr[j + 1] = key\n                return\n            \n            pi = partition(low, high)\n            _quicksort(low, pi - 1)\n            _quicksort(pi + 1, high)\n    \n    _quicksort(left, right)\n    return arr\n', 'agent': 'coder', 'timestamp': '2025-01-13T15:52:16.825956'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: python
+from typing import List, Optional
+
+def quicksort(arr: List[int], left: Optional[int] = None, ...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: coder
+2025-01-13 17:23:04,349 - DEBUG - Node chief_10cba35a-cf9c-49e9-8528-ad5d579b78a3 attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825962'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_def68cc5-a698-4149-9531-52d95e22e604 attributes: {'content': "Implementation looks comprehensive. Let's have our critic review the code for quality, performance, and potential improvements. Routing to critic.", 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825968'}
+2025-01-13 17:23:04,349 - DEBUG - Node content: Implementation looks comprehensive. Let's have our critic review the code for quality, performance, ...
+2025-01-13 17:23:04,349 - DEBUG - Node type: 
+2025-01-13 17:23:04,349 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,349 - DEBUG - Node message_4e2cdfa6-c3ac-4ffc-8bde-a8619481d232 attributes: {'content': 'Detailed Code Review:\n\nStrengths:\n1. Well-documented with type hints and docstrings\n2. Implements several optimizations:\n - Median-of-three pivot selection\n - Insertion sort for small subarrays\n - In-place partitioning\n3. Proper handling of edge cases\n4. Good variable naming and code structure\n\nPotential Improvements:\n1. Error Handling:\n - Could add input validation for non-numeric elements\n - Consider handling empty or None input\n\n2. Performance Optimizations:\n - Could implement tail recursion elimination\n - Might benefit from parallel processing for large arrays\n\n3. Flexibility Enhancements:\n - Consider adding comparison key parameter\n - Could make it generic for different data types\n\n4. Testing Considerations:\n - Add property-based testing\n - Include edge case tests\n - Benchmark against standard library sort\n\nOverall: Strong implementation that balances readability with performance.', 'agent': 'critic', 'timestamp': '2025-01-13T15:52:16.825975'}
+2025-01-13 17:23:04,352 - DEBUG - Node content: Detailed Code Review:
+
+Strengths:
+1. Well-documented with type hints and docstrings
+2. Implements se...
+2025-01-13 17:23:04,352 - DEBUG - Node type: 
+2025-01-13 17:23:04,352 - DEBUG - Agent type: critic
+2025-01-13 17:23:04,352 - DEBUG - Node chief_6ec2ac69-2d9c-4806-bda2-20713d2ad95e attributes: {'content': 'Analyzing response...', 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825982'}
+2025-01-13 17:23:04,352 - DEBUG - Node content: Analyzing response......
+2025-01-13 17:23:04,352 - DEBUG - Node type: 
+2025-01-13 17:23:04,352 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,352 - DEBUG - Node message_be7afe77-216f-4664-8ec4-cc2558f50284 attributes: {'content': "The implementation meets high quality standards but has room for some enhancements. Should we proceed with improvements based on the critic's suggestions, or is this implementation sufficient for your needs? The current version already includes several optimizations and is well-documented.", 'agent': 'chief', 'timestamp': '2025-01-13T15:52:16.825987'}
+2025-01-13 17:23:04,352 - DEBUG - Node content: The implementation meets high quality standards but has room for some enhancements. Should we procee...
+2025-01-13 17:23:04,352 - DEBUG - Node type: 
+2025-01-13 17:23:04,352 - DEBUG - Agent type: chief
+2025-01-13 17:23:04,353 - INFO - Processing edges...
+2025-01-13 17:23:04,353 - DEBUG - Edge source: query_fc575010-217b-4712-b95d-b78869e7daae
+2025-01-13 17:23:04,353 - DEBUG - Edge target: chief_eee07cbb-223a-4871-ae99-2016b70f9549
+2025-01-13 17:23:04,353 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825477', 'id': '0'}
+2025-01-13 17:23:04,353 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,353 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825477
+2025-01-13 17:23:04,353 - DEBUG - Edge source: chief_eee07cbb-223a-4871-ae99-2016b70f9549
+2025-01-13 17:23:04,353 - DEBUG - Edge target: message_b2c3976e-ee82-46ab-ba27-134379f615d3
+2025-01-13 17:23:04,353 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825489', 'id': '0'}
+2025-01-13 17:23:04,353 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,353 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825489
+2025-01-13 17:23:04,353 - DEBUG - Edge source: message_b2c3976e-ee82-46ab-ba27-134379f615d3
+2025-01-13 17:23:04,353 - DEBUG - Edge target: message_ca70a714-b8c4-4b7f-8bb7-d2c42e44f6b5
+2025-01-13 17:23:04,353 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825498', 'id': '0'}
+2025-01-13 17:23:04,353 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,353 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825498
+2025-01-13 17:23:04,353 - DEBUG - Edge source: message_ca70a714-b8c4-4b7f-8bb7-d2c42e44f6b5
+2025-01-13 17:23:04,353 - DEBUG - Edge target: chief_bb740252-e5b4-4379-ae67-f089a0ccef43
+2025-01-13 17:23:04,353 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825504', 'id': '0'}
+2025-01-13 17:23:04,353 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,353 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825504
+2025-01-13 17:23:04,353 - DEBUG - Edge source: chief_bb740252-e5b4-4379-ae67-f089a0ccef43
+2025-01-13 17:23:04,353 - DEBUG - Edge target: message_bb90d6cf-89da-463a-b26b-b27aaf20e2a3
+2025-01-13 17:23:04,353 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825512', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825512
+2025-01-13 17:23:04,354 - DEBUG - Edge source: message_bb90d6cf-89da-463a-b26b-b27aaf20e2a3
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_70912994-842c-4f34-b879-335043b9be45
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825518', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825518
+2025-01-13 17:23:04,354 - DEBUG - Edge source: message_70912994-842c-4f34-b879-335043b9be45
+2025-01-13 17:23:04,354 - DEBUG - Edge target: chief_ec6bad59-ca88-4b39-acbb-a9b0570b1a78
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825525', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825525
+2025-01-13 17:23:04,354 - DEBUG - Edge source: chief_ec6bad59-ca88-4b39-acbb-a9b0570b1a78
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_014acb6f-86b2-421e-bd77-02577a310f4d
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825533', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825533
+2025-01-13 17:23:04,354 - DEBUG - Edge source: message_014acb6f-86b2-421e-bd77-02577a310f4d
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_a9d8f510-92e1-4fc0-92b3-d5b7a25c2b83
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825541', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825541
+2025-01-13 17:23:04,354 - DEBUG - Edge source: message_a9d8f510-92e1-4fc0-92b3-d5b7a25c2b83
+2025-01-13 17:23:04,354 - DEBUG - Edge target: chief_8aec48fb-c5b3-47f7-a567-305b4296003b
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825547', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825547
+2025-01-13 17:23:04,354 - DEBUG - Edge source: chief_8aec48fb-c5b3-47f7-a567-305b4296003b
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_100caeed-e4e3-40a6-90b3-4d16c726a245
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825552', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825552
+2025-01-13 17:23:04,354 - DEBUG - Edge source: query_68e201e3-77ad-4174-9c24-0bb2e28498a1
+2025-01-13 17:23:04,354 - DEBUG - Edge target: chief_a633c53c-b25e-452f-b172-ab4bed36e8e3
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825561', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825561
+2025-01-13 17:23:04,354 - DEBUG - Edge source: chief_a633c53c-b25e-452f-b172-ab4bed36e8e3
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_3d0e3955-dad1-431f-803d-4942f6d1b330
+2025-01-13 17:23:04,354 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825567', 'id': '0'}
+2025-01-13 17:23:04,354 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,354 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825567
+2025-01-13 17:23:04,354 - DEBUG - Edge source: message_3d0e3955-dad1-431f-803d-4942f6d1b330
+2025-01-13 17:23:04,354 - DEBUG - Edge target: message_87cb81fc-629f-4023-97e9-f54cd0beb062
+2025-01-13 17:23:04,355 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825574', 'id': '0'}
+2025-01-13 17:23:04,355 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,355 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825574
+2025-01-13 17:23:04,355 - DEBUG - Edge source: message_87cb81fc-629f-4023-97e9-f54cd0beb062
+2025-01-13 17:23:04,355 - DEBUG - Edge target: chief_da8f70ed-c1af-42c8-8394-bf992597f4de
+2025-01-13 17:23:04,355 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825582', 'id': '0'}
+2025-01-13 17:23:04,355 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,355 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825582
+2025-01-13 17:23:04,355 - DEBUG - Edge source: chief_da8f70ed-c1af-42c8-8394-bf992597f4de
+2025-01-13 17:23:04,355 - DEBUG - Edge target: message_a913ac5e-1787-4766-973d-325a4702165d
+2025-01-13 17:23:04,355 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825588', 'id': '0'}
+2025-01-13 17:23:04,355 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,355 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825588
+2025-01-13 17:23:04,355 - DEBUG - Edge source: message_a913ac5e-1787-4766-973d-325a4702165d
+2025-01-13 17:23:04,355 - DEBUG - Edge target: message_40dcb732-bb4f-4455-8015-10bb9d4f3070
+2025-01-13 17:23:04,355 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825593', 'id': '0'}
+2025-01-13 17:23:04,355 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,355 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825593
+2025-01-13 17:23:04,355 - DEBUG - Edge source: message_40dcb732-bb4f-4455-8015-10bb9d4f3070
+2025-01-13 17:23:04,355 - DEBUG - Edge target: chief_81989960-b5d9-4282-8302-72b26cea92ae
+2025-01-13 17:23:04,355 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825601', 'id': '0'}
+2025-01-13 17:23:04,355 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,355 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825601
+2025-01-13 17:23:04,356 - DEBUG - Edge source: chief_81989960-b5d9-4282-8302-72b26cea92ae
+2025-01-13 17:23:04,356 - DEBUG - Edge target: message_553abddc-8279-4dd8-a139-7b9d0c24eac3
+2025-01-13 17:23:04,356 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825606', 'id': '0'}
+2025-01-13 17:23:04,356 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,356 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825606
+2025-01-13 17:23:04,356 - DEBUG - Edge source: message_553abddc-8279-4dd8-a139-7b9d0c24eac3
+2025-01-13 17:23:04,356 - DEBUG - Edge target: message_d35771c0-def4-4d74-910c-cab0a510be5d
+2025-01-13 17:23:04,356 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825615', 'id': '0'}
+2025-01-13 17:23:04,356 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,356 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825615
+2025-01-13 17:23:04,356 - DEBUG - Edge source: message_d35771c0-def4-4d74-910c-cab0a510be5d
+2025-01-13 17:23:04,356 - DEBUG - Edge target: chief_02d855c2-c180-4f46-8b90-b14774676b4a
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825623', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825623
+2025-01-13 17:23:04,357 - DEBUG - Edge source: chief_02d855c2-c180-4f46-8b90-b14774676b4a
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_84fcdedf-f0a1-4baa-8c39-b70bcddf1c6b
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825628', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825628
+2025-01-13 17:23:04,357 - DEBUG - Edge source: query_a1c88ebc-1f47-476b-8396-98c8fdc7e703
+2025-01-13 17:23:04,357 - DEBUG - Edge target: chief_b0e23e9b-d8b3-466e-a8e4-74a2f86c5fe0
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825637', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825637
+2025-01-13 17:23:04,357 - DEBUG - Edge source: chief_b0e23e9b-d8b3-466e-a8e4-74a2f86c5fe0
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_0c4ab1d4-c7b9-4d55-b15c-fa091084fb75
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825644', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825644
+2025-01-13 17:23:04,357 - DEBUG - Edge source: message_0c4ab1d4-c7b9-4d55-b15c-fa091084fb75
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_3e993535-b670-4dac-a057-8cc40e5cddbc
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825652', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825652
+2025-01-13 17:23:04,357 - DEBUG - Edge source: message_3e993535-b670-4dac-a057-8cc40e5cddbc
+2025-01-13 17:23:04,357 - DEBUG - Edge target: chief_4f70b504-861d-4bbb-8609-97607e580e3c
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825659', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825659
+2025-01-13 17:23:04,357 - DEBUG - Edge source: chief_4f70b504-861d-4bbb-8609-97607e580e3c
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_8795abbc-da49-41d4-a31d-8f71ff00b859
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825664', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825664
+2025-01-13 17:23:04,357 - DEBUG - Edge source: message_8795abbc-da49-41d4-a31d-8f71ff00b859
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_67ce702c-a2a0-4f85-96ad-7617c6433119
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825669', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825669
+2025-01-13 17:23:04,357 - DEBUG - Edge source: message_67ce702c-a2a0-4f85-96ad-7617c6433119
+2025-01-13 17:23:04,357 - DEBUG - Edge target: chief_bd53d097-3602-4ae4-aa49-8a428bef48c2
+2025-01-13 17:23:04,357 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825674', 'id': '0'}
+2025-01-13 17:23:04,357 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,357 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825674
+2025-01-13 17:23:04,357 - DEBUG - Edge source: chief_bd53d097-3602-4ae4-aa49-8a428bef48c2
+2025-01-13 17:23:04,357 - DEBUG - Edge target: message_595d9f70-eaee-45f8-bda4-64a757280615
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825679', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825679
+2025-01-13 17:23:04,358 - DEBUG - Edge source: message_595d9f70-eaee-45f8-bda4-64a757280615
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_99e4a477-7334-49a8-b507-d3329c626f8b
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825685', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825685
+2025-01-13 17:23:04,358 - DEBUG - Edge source: message_99e4a477-7334-49a8-b507-d3329c626f8b
+2025-01-13 17:23:04,358 - DEBUG - Edge target: chief_d421458e-d6b2-416b-a142-726e8189dc57
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825692', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825692
+2025-01-13 17:23:04,358 - DEBUG - Edge source: chief_d421458e-d6b2-416b-a142-726e8189dc57
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_5546518c-ace9-4a33-b34e-45f26ced4d6e
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825699', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825699
+2025-01-13 17:23:04,358 - DEBUG - Edge source: message_5546518c-ace9-4a33-b34e-45f26ced4d6e
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_2ef560e0-6fb4-41ec-84fa-a68b65d32c2e
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825704', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825704
+2025-01-13 17:23:04,358 - DEBUG - Edge source: message_2ef560e0-6fb4-41ec-84fa-a68b65d32c2e
+2025-01-13 17:23:04,358 - DEBUG - Edge target: chief_344864d8-4f2c-48cb-9dc0-44698c33f934
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825709', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825709
+2025-01-13 17:23:04,358 - DEBUG - Edge source: chief_344864d8-4f2c-48cb-9dc0-44698c33f934
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_1c24b9c6-9a2b-487e-83cd-7368419e5757
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825717', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825717
+2025-01-13 17:23:04,358 - DEBUG - Edge source: query_470ac084-151b-4a1c-b0e0-3978e149167f
+2025-01-13 17:23:04,358 - DEBUG - Edge target: chief_76f50cd3-0932-48d5-97d2-d241fd668233
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825727', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825727
+2025-01-13 17:23:04,358 - DEBUG - Edge source: chief_76f50cd3-0932-48d5-97d2-d241fd668233
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_d3fdec1b-d2d1-4220-93aa-ac1278179ad6
+2025-01-13 17:23:04,358 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825733', 'id': '0'}
+2025-01-13 17:23:04,358 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,358 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825733
+2025-01-13 17:23:04,358 - DEBUG - Edge source: message_d3fdec1b-d2d1-4220-93aa-ac1278179ad6
+2025-01-13 17:23:04,358 - DEBUG - Edge target: message_08afe253-721f-4a0e-8c4b-efc4e174ac87
+2025-01-13 17:23:04,359 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825741', 'id': '0'}
+2025-01-13 17:23:04,359 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,359 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825741
+2025-01-13 17:23:04,359 - DEBUG - Edge source: message_08afe253-721f-4a0e-8c4b-efc4e174ac87
+2025-01-13 17:23:04,359 - DEBUG - Edge target: chief_ab8b64be-5304-478c-a5e5-3c803778bad5
+2025-01-13 17:23:04,359 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825749', 'id': '0'}
+2025-01-13 17:23:04,359 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,359 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825749
+2025-01-13 17:23:04,359 - DEBUG - Edge source: chief_ab8b64be-5304-478c-a5e5-3c803778bad5
+2025-01-13 17:23:04,359 - DEBUG - Edge target: message_14f94869-366c-4a51-9e38-a8da320fd740
+2025-01-13 17:23:04,359 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825754', 'id': '0'}
+2025-01-13 17:23:04,359 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,359 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825754
+2025-01-13 17:23:04,360 - DEBUG - Edge source: message_14f94869-366c-4a51-9e38-a8da320fd740
+2025-01-13 17:23:04,360 - DEBUG - Edge target: message_557a195d-e390-465f-a9f9-7c65425f5eae
+2025-01-13 17:23:04,360 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825759', 'id': '0'}
+2025-01-13 17:23:04,360 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,360 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825759
+2025-01-13 17:23:04,360 - DEBUG - Edge source: message_557a195d-e390-465f-a9f9-7c65425f5eae
+2025-01-13 17:23:04,360 - DEBUG - Edge target: chief_09ce9165-04d8-4fd4-8ef2-2fbe9a3e9818
+2025-01-13 17:23:04,361 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825765', 'id': '0'}
+2025-01-13 17:23:04,361 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,361 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825765
+2025-01-13 17:23:04,361 - DEBUG - Edge source: chief_09ce9165-04d8-4fd4-8ef2-2fbe9a3e9818
+2025-01-13 17:23:04,361 - DEBUG - Edge target: message_c9ebd30a-5564-443c-8ccd-d3dce15cbf81
+2025-01-13 17:23:04,361 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825771', 'id': '0'}
+2025-01-13 17:23:04,361 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,361 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825771
+2025-01-13 17:23:04,361 - DEBUG - Edge source: message_c9ebd30a-5564-443c-8ccd-d3dce15cbf81
+2025-01-13 17:23:04,361 - DEBUG - Edge target: message_26e37774-32db-4157-9dbe-13fac79c7aec
+2025-01-13 17:23:04,361 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825779', 'id': '0'}
+2025-01-13 17:23:04,361 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,361 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825779
+2025-01-13 17:23:04,361 - DEBUG - Edge source: message_26e37774-32db-4157-9dbe-13fac79c7aec
+2025-01-13 17:23:04,361 - DEBUG - Edge target: chief_675bfe25-b0af-44b8-9ec4-d90c1e830a12
+2025-01-13 17:23:04,361 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825786', 'id': '0'}
+2025-01-13 17:23:04,361 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,361 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825786
+2025-01-13 17:23:04,361 - DEBUG - Edge source: chief_675bfe25-b0af-44b8-9ec4-d90c1e830a12
+2025-01-13 17:23:04,361 - DEBUG - Edge target: message_1f7e02f5-895d-4e6f-a8a2-4ee224207ef8
+2025-01-13 17:23:04,361 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825794', 'id': '0'}
+2025-01-13 17:23:04,361 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,361 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825794
+2025-01-13 17:23:04,362 - DEBUG - Edge source: query_b29e00be-f108-49f9-9beb-58ef80c88151
+2025-01-13 17:23:04,362 - DEBUG - Edge target: chief_49a0d144-eb0f-479c-be2a-3b2285df6364
+2025-01-13 17:23:04,362 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825803', 'id': '0'}
+2025-01-13 17:23:04,362 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,362 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825803
+2025-01-13 17:23:04,362 - DEBUG - Edge source: chief_49a0d144-eb0f-479c-be2a-3b2285df6364
+2025-01-13 17:23:04,362 - DEBUG - Edge target: message_96592d09-cc5a-4c95-9cd7-241a2f049575
+2025-01-13 17:23:04,362 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825808', 'id': '0'}
+2025-01-13 17:23:04,362 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,362 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825808
+2025-01-13 17:23:04,362 - DEBUG - Edge source: message_96592d09-cc5a-4c95-9cd7-241a2f049575
+2025-01-13 17:23:04,362 - DEBUG - Edge target: message_49537914-26b4-4ec1-b691-5e11b09b2eb3
+2025-01-13 17:23:04,362 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825813', 'id': '0'}
+2025-01-13 17:23:04,362 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,362 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825813
+2025-01-13 17:23:04,362 - DEBUG - Edge source: message_49537914-26b4-4ec1-b691-5e11b09b2eb3
+2025-01-13 17:23:04,362 - DEBUG - Edge target: chief_41087d9c-56dd-44d6-b81d-5275d4256107
+2025-01-13 17:23:04,362 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825821', 'id': '0'}
+2025-01-13 17:23:04,362 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,362 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825821
+2025-01-13 17:23:04,362 - DEBUG - Edge source: chief_41087d9c-56dd-44d6-b81d-5275d4256107
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_5a465801-525a-447b-82b2-0fd83861e714
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825827', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825827
+2025-01-13 17:23:04,363 - DEBUG - Edge source: message_5a465801-525a-447b-82b2-0fd83861e714
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_81de12e8-3a3a-4543-9829-7bad310d2103
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825834', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825834
+2025-01-13 17:23:04,363 - DEBUG - Edge source: message_81de12e8-3a3a-4543-9829-7bad310d2103
+2025-01-13 17:23:04,363 - DEBUG - Edge target: chief_67ebfa69-ef5c-4b3b-a203-36bb1ab268bd
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825842', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825842
+2025-01-13 17:23:04,363 - DEBUG - Edge source: chief_67ebfa69-ef5c-4b3b-a203-36bb1ab268bd
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_72ede42c-5b7c-42cf-aed1-7ffa4411a1ae
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825851', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825851
+2025-01-13 17:23:04,363 - DEBUG - Edge source: message_72ede42c-5b7c-42cf-aed1-7ffa4411a1ae
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_23795dfe-7197-4bf9-a599-7d213490f32e
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825875', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825875
+2025-01-13 17:23:04,363 - DEBUG - Edge source: message_23795dfe-7197-4bf9-a599-7d213490f32e
+2025-01-13 17:23:04,363 - DEBUG - Edge target: chief_4e95a9d3-acfb-4c8b-8c57-2aaf428d7cb5
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825883', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825883
+2025-01-13 17:23:04,363 - DEBUG - Edge source: chief_4e95a9d3-acfb-4c8b-8c57-2aaf428d7cb5
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_ab6369e1-5f9f-4b72-8edb-3a078c83dca8
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825889', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,363 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825889
+2025-01-13 17:23:04,363 - DEBUG - Edge source: message_ab6369e1-5f9f-4b72-8edb-3a078c83dca8
+2025-01-13 17:23:04,363 - DEBUG - Edge target: message_b16f6e63-82a5-4571-99c6-bc2691a7a5bb
+2025-01-13 17:23:04,363 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825897', 'id': '0'}
+2025-01-13 17:23:04,363 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825897
+2025-01-13 17:23:04,364 - DEBUG - Edge source: message_b16f6e63-82a5-4571-99c6-bc2691a7a5bb
+2025-01-13 17:23:04,364 - DEBUG - Edge target: chief_2a271cf8-f820-4450-84e6-bb078d9da5e5
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825904', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825904
+2025-01-13 17:23:04,364 - DEBUG - Edge source: chief_2a271cf8-f820-4450-84e6-bb078d9da5e5
+2025-01-13 17:23:04,364 - DEBUG - Edge target: message_4a346064-f823-4070-9be6-06ff374ae950
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825910', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825910
+2025-01-13 17:23:04,364 - DEBUG - Edge source: query_f2771961-debc-4ed8-949d-86df333c5324
+2025-01-13 17:23:04,364 - DEBUG - Edge target: chief_c9461649-1f77-474b-9fa1-40fa6e30a6aa
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'INITIATES', 'timestamp': '2025-01-13T15:52:16.825922', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: INITIATES
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825922
+2025-01-13 17:23:04,364 - DEBUG - Edge source: chief_c9461649-1f77-474b-9fa1-40fa6e30a6aa
+2025-01-13 17:23:04,364 - DEBUG - Edge target: message_8ab5e3ea-a607-4b7d-b0ed-74102a4e77f6
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825928', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825928
+2025-01-13 17:23:04,364 - DEBUG - Edge source: message_8ab5e3ea-a607-4b7d-b0ed-74102a4e77f6
+2025-01-13 17:23:04,364 - DEBUG - Edge target: message_f00a6148-4cf1-4f09-8c44-ff194bb3a6e1
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825936', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825936
+2025-01-13 17:23:04,364 - DEBUG - Edge source: message_f00a6148-4cf1-4f09-8c44-ff194bb3a6e1
+2025-01-13 17:23:04,364 - DEBUG - Edge target: chief_5bd56114-7c0d-465a-9f58-791ce28968b8
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825944', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825944
+2025-01-13 17:23:04,364 - DEBUG - Edge source: chief_5bd56114-7c0d-465a-9f58-791ce28968b8
+2025-01-13 17:23:04,364 - DEBUG - Edge target: message_5e53ce69-9e90-4ac5-8821-a54d53ade349
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825951', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825951
+2025-01-13 17:23:04,364 - DEBUG - Edge source: message_5e53ce69-9e90-4ac5-8821-a54d53ade349
+2025-01-13 17:23:04,364 - DEBUG - Edge target: message_25b92de9-d1dd-4ee0-9064-a03d810b7d11
+2025-01-13 17:23:04,364 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825957', 'id': '0'}
+2025-01-13 17:23:04,364 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,364 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825957
+2025-01-13 17:23:04,364 - DEBUG - Edge source: message_25b92de9-d1dd-4ee0-9064-a03d810b7d11
+2025-01-13 17:23:04,364 - DEBUG - Edge target: chief_10cba35a-cf9c-49e9-8528-ad5d579b78a3
+2025-01-13 17:23:04,365 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825964', 'id': '0'}
+2025-01-13 17:23:04,365 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,365 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825964
+2025-01-13 17:23:04,365 - DEBUG - Edge source: chief_10cba35a-cf9c-49e9-8528-ad5d579b78a3
+2025-01-13 17:23:04,365 - DEBUG - Edge target: message_def68cc5-a698-4149-9531-52d95e22e604
+2025-01-13 17:23:04,365 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825971', 'id': '0'}
+2025-01-13 17:23:04,365 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,365 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825971
+2025-01-13 17:23:04,365 - DEBUG - Edge source: message_def68cc5-a698-4149-9531-52d95e22e604
+2025-01-13 17:23:04,365 - DEBUG - Edge target: message_4e2cdfa6-c3ac-4ffc-8bde-a8619481d232
+2025-01-13 17:23:04,365 - DEBUG - Edge attributes: {'type': 'RESPONDS_TO', 'timestamp': '2025-01-13T15:52:16.825978', 'id': '0'}
+2025-01-13 17:23:04,365 - DEBUG - Edge type: RESPONDS_TO
+2025-01-13 17:23:04,365 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825978
+2025-01-13 17:23:04,365 - DEBUG - Edge source: message_4e2cdfa6-c3ac-4ffc-8bde-a8619481d232
+2025-01-13 17:23:04,365 - DEBUG - Edge target: chief_6ec2ac69-2d9c-4806-bda2-20713d2ad95e
+2025-01-13 17:23:04,365 - DEBUG - Edge attributes: {'type': 'FEEDBACK', 'timestamp': '2025-01-13T15:52:16.825983', 'id': '0'}
+2025-01-13 17:23:04,365 - DEBUG - Edge type: FEEDBACK
+2025-01-13 17:23:04,365 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825983
+2025-01-13 17:23:04,365 - DEBUG - Edge source: chief_6ec2ac69-2d9c-4806-bda2-20713d2ad95e
+2025-01-13 17:23:04,365 - DEBUG - Edge target: message_be7afe77-216f-4664-8ec4-cc2558f50284
+2025-01-13 17:23:04,365 - DEBUG - Edge attributes: {'type': 'ROUTES_TO', 'timestamp': '2025-01-13T15:52:16.825988', 'id': '0'}
+2025-01-13 17:23:04,365 - DEBUG - Edge type: ROUTES_TO
+2025-01-13 17:23:04,365 - DEBUG - Edge timestamp: 2025-01-13T15:52:16.825988
+2025-01-13 17:23:04,365 - INFO - Found 6 root nodes
+2025-01-13 17:23:04,365 - DEBUG - Root nodes: ['Implement a quicksort algorithm in Python', 'Implement a merge sort algorithm in Python', 'Create a PostgreSQL database connection class with connection pooling', 'Create a REST API client for OpenWeatherMap', 'Create a data processing pipeline for CSV files using pandas', 'Could you help me understand and write a QuickSort implementation in Python? Please explain the algorithm as well.']
