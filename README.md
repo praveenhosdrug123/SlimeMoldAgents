@@ -87,14 +87,6 @@ Conversation Graphs: graphs/conversation_graph.py
 
 ## Future Research Directions
 
-### Mechanistic Interpretability
-- Inverse Jeopardy-style reasoning for decomposing agent responses
-- Analysis of internal reasoning patterns across different agent types
-- Mapping and visualization of decision paths in multi-agent interactions
-
 ### Model-Based Embeddings for Syntactic Code Transformations
 - Syntactic Code Understanding
 - Code Equivalence Detection
-
-### Topological Weight Construction for Query-Response Manifolds
-- Direct weight optimization without gradient descent
